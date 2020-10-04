@@ -1,0 +1,26 @@
+<h1>ToDo App</h1>
+<div class="todoComponent">
+  <form [formGroup]="todoForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Content</mat-label>
+      <textarea matInput formControlName="content"></textarea>
+    </mat-form-field>
+  </form>
+  <button
+    mat-raised-button
+    color="primary"
+    [disabled]="this.todoForm.invalid"
+    (click)="saveTodoItem()"
+  >
+    Add Task
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <todolist [todoList]="todoList | async"></todolist>
+</div>

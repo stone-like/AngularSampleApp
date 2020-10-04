@@ -1,0 +1,7 @@
+<mat-list-item role="listitem">
+  <div>{{ item.title }}</div>
+  <div>{{ item.content }}</div>
+  <button mat-raised-button color="primary" (click)="deleteItem(item.id)">
+    deleteThis
+  </button>
+</mat-list-item>
