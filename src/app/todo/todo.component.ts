@@ -10,7 +10,7 @@ import { AppStore } from '../store/store';
   styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
-  public todoList = this.store.pipe(select(state => state.todo.todoList)); //きちんとasyncパイプで解決しよう
+  public todoList$ = this.store.pipe(select(state => state.todo.todoList)); //きちんとasyncパイプで解決しよう
   public todoForm: FormGroup;
   constructor(
     protected formBuilder: FormBuilder,

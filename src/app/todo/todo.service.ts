@@ -19,6 +19,14 @@ export class TodoService {
     }),
     body: null
   };
+
+  searchToDo(query: string): Observable<ToDoItem[]> {
+    console.log('startSearching');
+    return this.http.post<ToDoItem[]>(`/api/searchByTitle`, {
+      title: query
+    });
+  }
+
   fetchAllToDo(): void {
     this.http
       .get<ToDoItem[]>(`/api/todo`)

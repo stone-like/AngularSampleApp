@@ -12,6 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { TodolistComponent } from './todolist/todolist.component';
 import { TodolistitemComponent } from './todolist/todolistitem/todolistitem.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [TodoComponent, TodolistComponent, TodolistitemComponent],
@@ -19,12 +20,13 @@ import { TodolistitemComponent } from './todolist/todolistitem/todolistitem.comp
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    MatListModule,
-    MatDividerModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    TodoRoutingModule
+    TodoRoutingModule,
+    SharedModule
+    // MatListModule,
+    // MatInputModule,
+    // MatFormFieldModule,
+    // MatButtonModule,
+    // MatDividerModule
   ],
   exports: [TodoComponent]
 })

@@ -1,0 +1,9 @@
+<div>
+  <input matInput #bandSearch (input)="searchQuery$.next(bandSearch.value)" />
+
+  <mat-list>
+    <div *ngFor="let item of searchResult">
+      <p>{{ item.title }}</p>
+    </div>
+  </mat-list>
+</div>

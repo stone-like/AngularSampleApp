@@ -1,5 +1,8 @@
 {
   "/api/todo": {
     "target": "http://localhost:8000"
+  },
+  "/api/searchByTitle": {
+    "target": "http://localhost:8000"
   }
 }
